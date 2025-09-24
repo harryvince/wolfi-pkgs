@@ -1,7 +1,7 @@
 {
 	"name": "wolfi-pkgs",
 	"private": true,
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"type": "module",
 	"scripts": {
 		"dev": "bun --bun run vite dev",
@@ -16,7 +16,10 @@
 		"db:push": "drizzle-kit push --force",
 		"db:generate": "drizzle-kit generate",
 		"db:migrate": "drizzle-kit migrate",
-		"db:studio": "drizzle-kit studio"
+		"db:studio": "drizzle-kit studio",
+		"docker:build": "docker build -t harryvince/wolfi-pkgs:`jq -r .version package.json` .",
+		"docker:run": "docker run -p 3000:3000 harryvince/wolfi-pkgs:`jq -r .version package.json`",
+		"docker:push": "docker push harryvince/wolfi-pkgs:`jq -r .version package.json`"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",

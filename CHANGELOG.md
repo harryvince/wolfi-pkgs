@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+- Added analytics to the site.
+
 ### Changed
 
 - Rather than getting a 404 page when a package is not found it instead does
